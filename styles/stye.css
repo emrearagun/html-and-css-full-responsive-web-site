@@ -82,10 +82,22 @@ a {
   text-transform: uppercase;
 }
 
+.search-input{
+  font-size: 1.6rem;
+ color: var(--black-color);
+ padding: 1rem;
+ text-transform: none;
+ border-radius: 3rem;
+}
+
+
 /*! header start*/
 .header .logo img {
   height: 10rem;
 }
+
+
+
 
 .header {
   background-color: white;
@@ -465,34 +477,113 @@ a {
   width: 100%;
 }
 
-
-.blogs .box-container .box:hover .images img{
- transform: scale(1.2);
+.blogs .box-container .box:hover .images img {
+  transform: scale(1.2);
 }
 
-
-.blogs .box-container .box .content{
-padding: 2rem;
+.blogs .box-container .box .content {
+  padding: 2rem;
 }
 
-.blogs .box-container .box .content .title{
+.blogs .box-container .box .content .title {
   line-height: 1.5;
   font-size: 2.5rem;
 }
 
-
-.blogs .box-container .box .content span{
+.blogs .box-container .box .content span {
   display: block;
   padding-top: 1rem;
   font-size: 2rem;
 }
 
-.blogs .box-container .box .content p{
-font-size: 1.6rem;
-line-height: 1.8;
-color: #ccc;
-padding: 1rem 0;
+.blogs .box-container .box .content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #ccc;
+  padding: 1rem 0;
+}
+
+/*! blog section end*/
+
+/*! footer start*/
+.footer {
+  background-color: var(--black-color);
+  text-align: center;
+}
+
+.footer .search {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .search .search-input {
+  width: 30rem;
+}
+
+.footer .search .btn-primary {
+  background-color: var(--main-color);
+  padding: 1rem 2rem;
+  margin: 1rem;
 }
 
 
-/*! blog section end*/
+.footer .share{
+ padding: 2rem 0;
+
+}
+
+
+.footer .share a{
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  color: #fff;
+  font-size: 2rem;
+  border: var(--border);
+  border-radius: 50%;
+  margin: 0.3rem;
+}
+
+
+.footer .share a:hover{
+  background-color: var(--main-color);
+
+}
+
+.footer .links{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+ 
+}
+
+.footer .links a{
+background-color: var(--main-color);
+padding: 0.7rem 2rem;
+color: #fff;
+font-size: 2rem;
+border: var(--black-color);
+}
+
+.footer .links a:hover{
+  background-color: var(--black-color);
+  opacity: 0.7;
+  }
+
+  .footer .links a.active{
+    background-color: var(--black-color);
+  }
+
+  .footer .credit{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 300;
+    padding-top:1.5rem;
+  }
+
+  .footer .credit span{
+    color: var(--main-color);
+  }
+
+/*!footer end*/
