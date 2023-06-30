@@ -3,7 +3,7 @@
 :root {
   --main-color: #e84242;
   --black-color: #121212;
-  --borer: 0.1rem solid rgba(255, 255, 255, 0.4);
+  --border: 0.1rem solid rgba(255, 255, 255, 0.637);
 }
 
 * {
@@ -303,45 +303,196 @@ a {
 
 /*! products end */
 
-
 /*! about start */
 
-.about .row{
+.about .row {
   display: flex;
   flex-wrap: wrap;
   column-gap: 2rem;
 }
 
-
-
-.about .row .image{
+.about .row .image {
   flex: 1 1 45rem;
 }
 
-
-.about .row img{
+.about .row img {
   width: 100%;
 }
 
-.about .row .content{
+.about .row .content {
   flex: 1 1 45rem;
 }
 
-.about .row .content h3{
+.about .row .content h3 {
   font-size: 3rem;
   color: #fff;
 }
 
-.about .row .content p{
+.about .row .content p {
   font-size: 16px;
   color: #fff;
   padding: 1rem 0;
   line-height: 1.8rem;
 }
 
-
-
-
-
-
 /*! about end */
+
+/*! review section start */
+.review .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.review .box-container .box {
+  border: var(--border);
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #fff;
+  border-radius: 3rem;
+}
+
+.review .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  padding: 2rem 0;
+}
+
+.review .box-container .box .user {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review .box-container .box h3 {
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.review .box-container .box .stars i {
+  font-size: 15px;
+  color: gold;
+}
+
+/*! review section end */
+
+/*! contact section start*/
+.contact .row {
+  display: flex;
+  background-color: var(--black-color);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  height: 45rem;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form h3 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.contact .row form .inputBox {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  border: var(--border);
+}
+
+.contact .row form .inputBox i {
+  color: #fff;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.contact .row form .inputBox input {
+  width: 90%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+  border: none;
+}
+
+.contact .row form .btn {
+  color: #fff;
+  font-weight: bold;
+  background-color: var(--main-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+/*! contact section end*/
+
+/*! blog section start*/
+.blogs .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.3rem;
+}
+
+.blogs .box-container .box {
+  background-color: #fff;
+  border-radius: 3rem;
+}
+
+.blogs .box-container .box .images {
+  height: 25rem;
+  overflow: hidden;
+  width: 100%;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+.blogs .box-container .box .images img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+
+.blogs .box-container .box:hover .images img{
+ transform: scale(1.2);
+}
+
+
+.blogs .box-container .box .content{
+padding: 2rem;
+}
+
+.blogs .box-container .box .content .title{
+  line-height: 1.5;
+  font-size: 2.5rem;
+}
+
+
+.blogs .box-container .box .content span{
+  display: block;
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+.blogs .box-container .box .content p{
+font-size: 1.6rem;
+line-height: 1.8;
+color: #ccc;
+padding: 1rem 0;
+}
+
+
+/*! blog section end*/
