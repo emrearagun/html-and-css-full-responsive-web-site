@@ -82,22 +82,51 @@ a {
   text-transform: uppercase;
 }
 
-.search-input{
+.search-input {
   font-size: 1.6rem;
- color: var(--black-color);
- padding: 1rem;
- text-transform: none;
- border-radius: 3rem;
+  color: var(--black-color);
+  padding: 1rem;
+  text-transform: none;
+  border-radius: 3rem;
 }
 
-
 /*! header start*/
+
+.header .search-form{
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 3rem;
+  box-shadow: 0px 20px 14px 0px rgba(0 0 0 / 75%);
+  transform: scaleY(0);
+  }
+
+.header .search-form.active{
+  transform: scaleY(1);
+}
+
+  .header .search-form i{
+   cursor: pointer;
+   font-size: 2.2rem;
+   margin-right: 1.5rem;
+   color: var(--black-color);
+
+  }
+
+  .header .search-form input{
+  width: 100%;
+ 
+   }
+
+
 .header .logo img {
   height: 10rem;
 }
-
-
-
 
 .header {
   background-color: white;
@@ -133,9 +162,80 @@ a {
   background-color: transparent;
 }
 
+
+.header {
+  position: relative;
+}
+
+.header .cart-items-container {
+  position: absolute;
+  top: 100%;
+  height: calc(100vh - 9rem);
+  width: 35rem;
+  background-color: #fff;
+  box-shadow: 0px 20px 14px 0px rgba(0, 0, 0, 0.75);
+  right: 0;
+}
+
+ .header .cart-items-container.active{
+right: 3rem;
+}
+
+
+
+.header .cart-items-container .cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+
+.cart-items-container .cart-item:hover{
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+.header .cart-items-container .cart-item .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+}
+
+.header .cart-items-container .cart-item img {
+  height: 7rem;
+}
+
+.cart-items-container .cart-item .content h3{
+font-size: 2rem;
+color: var(--black-color);
+padding-bottom: 0.5rem;
+}
+
+.cart-items-container .cart-item .price{
+font-size: 1.5rem;
+color: var(--black-color);
+}
+
+.cart-items-container .btn{
+width: 100%;
+text-align: center;
+border-radius: unset;
+}
+
+.header #menu-btn {
+  display: none;
+}
+
+
 /*! header end*/
 
 /*! home start*/
+
+
 .home {
   min-height: 100vh;
   background: url(/images/home.jpg) no-repeat;
@@ -526,14 +626,11 @@ a {
   margin: 1rem;
 }
 
-
-.footer .share{
- padding: 2rem 0;
-
+.footer .share {
+  padding: 2rem 0;
 }
 
-
-.footer .share a{
+.footer .share a {
   width: 5rem;
   height: 5rem;
   line-height: 5rem;
@@ -544,46 +641,93 @@ a {
   margin: 0.3rem;
 }
 
-
-.footer .share a:hover{
+.footer .share a:hover {
   background-color: var(--main-color);
-
 }
 
-.footer .links{
+.footer .links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
- 
 }
 
-.footer .links a{
-background-color: var(--main-color);
-padding: 0.7rem 2rem;
-color: #fff;
-font-size: 2rem;
-border: var(--black-color);
+.footer .links a {
+  background-color: var(--main-color);
+  padding: 0.7rem 2rem;
+  color: #fff;
+  font-size: 2rem;
+  border: var(--black-color);
 }
 
-.footer .links a:hover{
+.footer .links a:hover {
   background-color: var(--black-color);
   opacity: 0.7;
-  }
+}
 
-  .footer .links a.active{
-    background-color: var(--black-color);
-  }
+.footer .links a.active {
+  background-color: var(--black-color);
+}
 
-  .footer .credit{
-    font-size: 2rem;
-    color: #fff;
-    font-weight: 300;
-    padding-top:1.5rem;
-  }
+.footer .credit {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300;
+  padding-top: 1.5rem;
+}
 
-  .footer .credit span{
-    color: var(--main-color);
-  }
+.footer .credit span {
+  color: var(--main-color);
+}
 
 /*!footer end*/
+
+/*! responsive start*/
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .header .logo img {
+    height: 7rem;
+  }
+  section {
+    padding: 2rem;
+  }
+  .products .box-container .box .box-head .name {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 95%;
+    background-color: #fff;
+    height: calc(100vh - 9rem);
+    width: 30rem;
+    box-shadow: 0px 20px 14px 0px rgba(0 0 0 / 75%);
+    right: -100%;
+   
+  }
+
+.header .navbar.active{
+  right: 3rem;
+}
+
+  .header .navbar a {
+    color: var(--black-color);
+    display: block;
+    padding: 0.5rem;
+    margin: 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+
+/*! responsive end*/
